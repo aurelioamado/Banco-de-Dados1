@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+ 
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudantes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Lista de Estudantes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Curso</th>
+                <th>Email</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudante in estudantes %}
+            <tr>
+                <td>{{ estudante['id'] }}</td>
+                <td>{{ estudante['nome'] }}</td>
+                <td>{{ estudante['curso'] }}</td>
+                <td>{{ estudante['email'] }}</td>
+                <td>{{ estudante['ano'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
